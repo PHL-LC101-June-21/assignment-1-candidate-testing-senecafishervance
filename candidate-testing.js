@@ -23,7 +23,10 @@ let correctAnswers = ["Sally Ride",
   "Trajectory",
   "3"
    ];
-let candidateAnswers = []
+let candidateAnswers = [];
+let countCorrect = Number();
+let grade = Number();
+
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
@@ -37,32 +40,31 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
     let candidateAnswer = input.question(questions[i])
     candidateAnswers.push(candidateAnswer)
-    console.log(question[i]);
     console.log(`Candidate Answer: ${candidateAnswers[i]}`);
-    console.log(`Correct Answer: ${correctAnswers[i]}`);
-    
-  }
-  
+    console.log(`Correct Answer: ${correctAnswers[i]}\n`);
+    if (candidateAnswers[i].toUpperCase() == correctAnswers[i].toUpperCase()) {
+      countCorrect = countCorrect + 1;
+    } else {
+      
+    }
 }
-
+}
 
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
-
-
-  // let grade = 0/5;
-  // for (let i =0; i <= correctAnswers.length; i++) {
-  //   if (candidateAnswers[i] == correctAnswers[i]) {
-  //   grade = "5/5"
-  //   return `Overall Grade: ${} % \n Status: ${}`;
-  // } else if (candidateAnswers[i) 
   
-  // }
+  let grade = countCorrect *20
+  let status = '';
+    if (grade >= 80) {
+      status = 'Passed'
+  } else {
+    status = 'Failed'
+  }
 
-  return grade;
+  console.log(`>>> Overall Grade: ${grade} % (${countCorrect} of 5 responses correct) <<< \n>>> Status: ${status}<<<`);
+  
 
 }
 
