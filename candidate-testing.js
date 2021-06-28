@@ -3,15 +3,12 @@
 // TODO 2: modify your quiz app to ask 5 questions //
 // TODO 1.1a: Define candidateName //
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-
-// let correctAnswer = "Sally Ride";
-// let candidateAnswer = input.question(question[i]);
-// let question = '';
-// let question = "Who was the first American woman in space? ";
-
 const input = require('readline-sync');
+let question = "Who was the first American woman in space? ";
+let correctAnswer = "Sally Ride";
+let candidateAnswer = []
+// let question = '';
 let candidateName = '';
-input.question("Candidate Name:");
 
 
 let questions = ["1. Who was the first American woman in space? ",
@@ -34,12 +31,12 @@ let candidateName = input.question("Candidate Name:");
 console.log("Welcome Candidate: " + candidateName)
 }
 
-function askQuestion(i) {
+function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
-  for (let i = 0; i > questions.length; i++) {
-    let candidateAnswers = input.question(questions[i])
-    
+  for (let i = 0; i < questions.length; i++) {
+    let candidateAnswer = input.question(questions[i])
+    return question[i];
   }
   
 }
