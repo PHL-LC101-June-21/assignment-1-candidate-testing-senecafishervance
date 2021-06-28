@@ -53,11 +53,14 @@ function gradeQuiz(candidateAnswers) {
 
 
 
-  let grade = "0/5";
-  if (candidateAnswers[i] == correctAnswers[i]) {
-    grade = "5/5"
-    console.log("Answer 1: " + correctAnswer)
-  }
+  // let grade = 0/5;
+  // for (let i =0; i <= correctAnswers.length; i++) {
+  //   if (candidateAnswers[i] == correctAnswers[i]) {
+  //   grade = "5/5"
+  //   return `Overall Grade: ${} % \n Status: ${}`;
+  // } else if (candidateAnswers[i) 
+  
+  // }
 
   return grade;
 
