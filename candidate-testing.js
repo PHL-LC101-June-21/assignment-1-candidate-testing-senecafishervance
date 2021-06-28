@@ -38,7 +38,8 @@ function askQuestion() {
     let candidateAnswer = input.question(questions[i])
     candidateAnswers.push(candidateAnswer)
     console.log(question[i]);
-    console.log(candidateAnswers);
+    console.log(`Candidate Answer: ${candidateAnswers[i]}`);
+    console.log(`Correct Answer: ${correctAnswers[i]}`);
     
   }
   
@@ -52,14 +53,13 @@ function gradeQuiz(candidateAnswers) {
 
 
 
-  // // let grade = "1/1";
-  // // if (correctAnswer == candidateAnswer) {
-  // //   grade = "1/1"
-  // //   console.log("Answer 1: " + correctAnswer)
-  // //   console.log(("Candidate Accuracy: " + grade))
-  // }
+  let grade = "0/5";
+  if (candidateAnswers[i] == correctAnswers[i]) {
+    grade = "5/5"
+    console.log("Answer 1: " + correctAnswer)
+  }
 
-  // return grade;
+  return grade;
 
 }
 
