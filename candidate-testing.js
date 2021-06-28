@@ -36,7 +36,10 @@ function askQuestion() {
 
   for (let i = 0; i < questions.length; i++) {
     let candidateAnswer = input.question(questions[i])
-    return question[i];
+    candidateAnswers.push(candidateAnswer)
+    console.log(question[i]);
+    console.log(candidateAnswers);
+    
   }
   
 }
